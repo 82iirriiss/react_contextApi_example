@@ -2,16 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 import ColorBox from './components/ColorBox';
 import { ColorProvider} from './contexts/color';
+import SelectColors from './components/SelectColors';
 
 function App() {
   return (
-    <div className="App">
-      <ColorProvider value={{color: 'red'}}>
+      <ColorProvider>
         <div>
+          <SelectColors/>
           <ColorBox/> 
         </div>
       </ColorProvider>  
-    </div>
+
   );
 };
 
